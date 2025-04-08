@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Page</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h2>Welcome Back</h2>
+        <p>Enter your credentials to access your account</p>
+        <form id="loginForm">
+            <label for="email">Email Address</label>
+            <input type="email" id="isc@gmail.com" placeholder="you@example.com" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="isc placeholder="••••••••" required>
+
+            <div class="options">
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+            
+            <a href="dash.html">
+                <button type="button">Sign In →</button>
+            </a>
+                    
+        <p>Don't have an account? <a href="#" class="sign-up">Sign Up</a></p>
+        
+        <div class="social-login">
+            <button class="google">Google</button>
+            <button class="facebook">Facebook</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            
+            if (email === "test@example.com" && password === "password123") {
+                alert("Login successful!");
+            } else {
+                alert("Invalid email or password");
+            }
+        });
+    </script>
+</body>
+</html>

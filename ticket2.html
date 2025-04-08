@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Method</title>
+    <link rel="stylesheet" href="ticket2.css">
+</head>
+<body>
+    <div class="payment-window">
+        <div class="header">
+            <h2>Payment Method</h2>
+            <span class="close-button">&times;</span>
+        </div>
+        <p class="subheader">Choose how you'd like to pay</p>
+
+        <div class="order-summary">
+            <h3>Order Summary</h3>
+            <div class="summary-item">
+                <span>Cto Forum</span>
+                <span>Exclusive Three days</span>
+            </div>
+            <div class="summary-item">
+                <span>Quantity</span>
+                <span>1</span>
+            </div>
+            <div class="summary-item total">
+                <span>Total</span>
+                <span>500 DZD / 2.99 USD</span>
+            </div>
+        </div>
+
+        <div class="payment-options">
+            <button class="payment-option selectable-option" data-payment-type="card">
+                <span class="icon">&#128179;</span>
+                <div class="option-details">
+                    <span>Credit/Debit Card</span>
+                    <span class="sub-text">Pay securely using your card</span>
+                </div>
+            </button>
+            <button class="payment-option selectable-option" data-payment-type="bank">
+                <span class="icon">&#127968;</span>
+                <div class="option-details">
+                    <span>Bank Transfer</span>
+                    <span class="sub-text">Transfer directly to our bank account</span>
+                </div>
+            </button>
+        </div>
+
+        <div class="actions">
+            <button type="button" class="back-button">Back</button>
+            <div class="actions">
+                <div class="actions">
+                    <a href="ticket3.html">
+                        <button type="button" class="payment-button">Confirm purchase </button>
+                    </a>
+                </div>    
+            </div>        </div>
+    </div>
+
+    <script src="ticket2.java"></script>
+</body>
+</html>

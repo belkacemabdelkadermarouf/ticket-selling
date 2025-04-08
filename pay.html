@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Tix - Tickets & Payments</title>
+    <link rel="stylesheet" href="pay.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+                                <div class="container">
+                                    <aside class="sidebar">
+                                        <a href="style.html" class="logo">EventTix</a>
+                                        <nav>
+                                            <a href="dash.html" class="active"><i class="fas fa-chart-line"></i> Dashboard Overview</a>
+                                            <a href="my-events.html"><i class="fas fa-calendar-alt"></i> My Events</a>
+                                            <a href="pay.html"><i class="fas fa-ticket-alt"></i> Tickets & Payments</a>
+                                            <a href="notif.html"><i class="fas fa-bell"></i> Notifications</a>
+                                            <a href="#"><i class="fas fa-users"></i> Community</a>
+                                            <a href="#"><i class="fas fa-envelope"></i> Messages</a>
+                                            <a href="sett.html"><i class="fas fa-cog"></i> Settings & Profile</a>
+                                        </nav>
+                                        <style>
+                                            .user-avatar {
+                                              width: 40px; /* Adjust size as needed */
+                                              height: 40px; /* Adjust size as needed */
+                                              border-radius: 50%; /* Makes it circular */
+                                              overflow: hidden; /* Clips content to the circle */
+                                              display: flex;
+                                              justify-content: center;
+                                              align-items: center;
+                                              background-color: #ccc; /* Placeholder background color */
+                                              color: #fff; /* Placeholder text color */
+                                              font-size: 16px; /* Adjust font size for initials */
+                                            }
+                                          
+                                            .user-avatar img {
+                                              width: 100%;
+                                              height: 100%;
+                                              object-fit: cover; /* Ensures the image fills the circle without distortion */
+                                            }
+                                          
+                                            .help-center {
+                                              /* Add your styling for the help center text */
+                                            }
+                                          
+                                            .user-profile {
+                                              display: flex;
+                                              align-items: center;
+                                              /* Add other styling for the user profile container */
+                                            }
+                                          
+                                            .user-details {
+                                              margin-left: 10px; /* Adjust spacing between avatar and details */
+                                              /* Add other styling for user details */
+                                            }
+                                          
+                                            .user-name {
+                                              /* Add styling for the user name */
+                                            }
+                                          
+                                            .user-status {
+                                              font-size: 0.8em;
+                                              color: #888;
+                                              /* Add styling for the user status */
+                                            }
+                                          
+                                            .logout {
+                                              margin-left: auto; /* Push logout to the right */
+                                              /* Add styling for the logout button/text */
+                                            }
+                                          </style>
+                                          
+                                          <div class="help-center">Help Center</div>
+                                          <div class="user-profile">
+                                            <div class="user-avatar">
+                                              <img src="images/man.avif" alt="User Avatar">
+                                              </div>
+                                            <div class="user-details">
+                                              <div class="user-name">John Doe</div>
+                                              <div class="user-status">Premium Member</div>
+                                            </div>
+                                            <div class="logout">Logout</div>
+                                          </div>
+                                    </aside>
+                                    <!DOCTYPE html>
+                                    <html lang="en">
+                                    <head>
+                                        <meta charset="UTF-8">
+                                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                        <title>African Startup Conference Ticket</title>
+                                        <style>
+                                        
+                                            .container {
+                                                display: flex;
+                                                align-items: center;
+                                                min-height: inherit; 
+                                            }
+                                    
+                                            .ticket-container {
+                                                background-color: #1c2536;
+                                                border-radius: 8px;
+                                                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                                                width: 300px; 
+                                                padding: 15px; 
+                                            }
+                                    
+                                            .top-bar {
+                                                display: flex;
+                                                gap: 8px;
+                                                margin-bottom: 15px;
+                                            }
+                                    
+                                            .top-bar button {
+                                                background-color: #28a745;
+                                                color: white;
+                                                border: none;
+                                                border-radius: 4px;
+                                                padding: 6px 10px; 
+                                                cursor: pointer;
+                                                font-size: 0.8rem; 
+                                            }
+                                    
+                                            .top-bar button.inactive {
+                                                background-color: #6c757d;
+                                            }
+                                    
+                                            .ticket-header {
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+                                                margin-bottom: 10px; 
+                                            }
+                                    
+                                            .ticket-title {
+                                                font-size: 1rem; 
+                                                font-weight: bold;
+                                                color: #a7b5c5;
+                                            }
+                                    
+                                            .ticket-icons {
+                                                display: flex;
+                                                gap: 8px; 
+                                            }
+                                    
+                                            .ticket-icons svg {
+                                                fill: #a7b5c5;
+                                                width: 16px; 
+                                                height: 16px; 
+                                                cursor: pointer;
+                                            }
+                                    
+                                            .ticket-type {
+                                                color: #6c7a89;
+                                                font-size: 0.8rem;
+                                                margin-bottom: 8px; 
+                                            }
+                                    
+                                            .qr-code-card {
+                                                background-color: #fff;
+                                                border-radius: 4px; 
+                                                padding: 10px; 
+                                                text-align: center;
+                                                margin-bottom: 10px; 
+                                            }
+                                    
+                                            .qr-code {
+                                                max-width: 100%;
+                                                height: auto;
+                                            }
+                                    
+                                            .ticket-details {
+                                                font-size: 0.8rem; 
+                                                color: #a7b5c5;
+                                                margin-bottom: 12px; 
+                                            }
+                                    
+                                            .detail-row {
+                                                display: flex;
+                                                justify-content: space-between;
+                                                margin-bottom: 6px;
+                                            }
+                                    
+                                            .detail-label {
+                                                color: #6c7a89;
+                                            }
+                                    
+                                            .download-button {
+                                                background-color: #28a745;
+                                                color: white;
+                                                border: none;
+                                                border-radius: 4px; 
+                                                padding: 8px 12px; 
+                                                cursor: pointer;
+                                                font-size: 0.9rem; 
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                gap: 6px; 
+                                                width: 100%;
+                                                box-sizing: border-box;
+                                            }
+                                    
+                                            .download-button:hover {
+                                                background-color: #218838;
+                                            }
+                                        </style>
+                                    </head>
+                                    <body>
+                                    
+                                        <div class="container">
+                                            <div class="ticket-container">
+                                                <div class="top-bar">
+                                                    <button class="active">Upcoming</button>
+                                                    <button class="inactive">Past</button>
+                                                </div>
+                                    
+                                                <div class="ticket-header">
+                                                    <h2 class="ticket-title">Cto Forum</h2>
+                                                    <div class="ticket-icons">
+                                                        <svg viewBox="0 0 24 24">
+                                                            <path fill="currentColor" d="M18 16.08c-.76 0-1.48.3-2 .81L8.7 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.3-4.19c.52.51 1.24.81 2 .81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L6 11.29c-.52-.51-1.24-.81-2-.81-1.66 0-3 1.34-3 3s1.34 3 3 3c.76 0 1.48-.3 2-.81l7.3 4.19c-.05-.23-.09-.46-.09-.7s.04.47.09.7L8 19.29c-.52.51-1.24-.81-2 .81-1.66 0-3-1.34-3-3s1.34-3 3-3c.76 0 1.48.3 2 .81l7.3 4.19c-.05-.23-.09-.46-.09-.7s.04-.47.09-.7l-7.3-4.19c.52-.51 1.24-.81 2-.81 1.66 0 3 1.34 3 3s-1.34 3-3 3z"/>
+                                                        </svg>
+                                                        <svg viewBox="0 0 24 24">
+                                                            <path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                    
+                                                <p class="ticket-type">Visitor</p>
+                                    
+                                                <div class="qr-code-card">
+                                                    <img src="images/qr code.jpg" alt="QR Code" style="max-width: 100%; height: auto;">
+                                                </div>
+                                    
+                                                <div class="ticket-details">
+                                                    <div class="detail-row">
+                                                        <span class="detail-label">Purchase Date:</span>
+                                                        <span>30/03/2025</span>
+                                                    </div>
+                                                    <div class="detail-row">
+                                                        <span class="detail-label">Quantity:</span>
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="detail-row">
+                                                        <span class="detail-label">Price:</span>
+                                                        <span>Free Pack</span>
+                                                    </div>
+                                                    <div class="detail-row">
+                                                        <span class="detail-label">Ticket ID:</span>
+                                                        <span>1743368295036</span>
+                                                    </div>
+                                                </div>
+                                    
+                                                <button class="download-button">
+                                                   Download Ticket </button>    
+                                                </div>
+                                                     </div>
+                                    
+                                    </body>
+                                    </html>
+                                </div>
+    <script src="pay.js"></script>
+
+</body>
+</html>

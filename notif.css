@@ -1,0 +1,617 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0; /* Light text */
+}
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.sidebar-nav {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-nav a {
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-nav a i {
+    margin-right: 10px;
+}
+
+.sidebar-nav a.active {
+    background-color: #34495e;
+}
+
+.sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid #34495e;
+}
+
+.sidebar-footer a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.sidebar-footer a i {
+    margin-right: 10px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid #34495e;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #3498db;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.user-avatar i {
+    color: #fff;
+}
+
+.user-info span {
+    display: block;
+}
+
+.user-info small {
+    color: #ccc;
+}
+
+.edit-profile {
+    color: #3498db;
+    text-decoration: none;
+    margin-left: auto;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.create-event-btn {
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.notifications {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.notification {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.notification:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.notification p {
+    margin: 0;
+}
+
+.notification small {
+    color: #999;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #282c34; 
+    color: #fff; 
+}
+
+.notifications-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #3d424d; 
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.title p {
+    margin: 5px 0 0;
+    color: #ccc;
+}
+
+.actions button {
+    background-color: #528bff; 
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex; 
+    align-items: center;
+}
+
+.actions button i {
+    margin-right: 5px;
+}
+
+.actions button.create-event {
+    background-color: #4CAF50; 
+}
+
+.notifications-list {
+    background-color: #333740; 
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #444; 
+}
+
+.notification:last-child {
+    border-bottom: none;
+}
+
+.notification .icon {
+    margin-right: 15px;
+    font-size: 1.2em;
+    color: #528bff; 
+}
+
+.notification .content {
+    flex-grow: 1;
+}
+
+.notification p {
+    margin: 0;
+}
+
+.notification small {
+    color: #ccc;
+}
+
+.notification .status {
+    color: #4CAF50; 
+    font-size: 1.2em;
+}
+.sidebar {
+    width: 250px;
+    background-color: #252525;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #3498db; 
+}
+
+.sidebar nav {
+    flex-grow: 1;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #e0e0e0;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav a:hover, .sidebar nav a.active {
+    background-color: #333;
+}
+
+.sidebar nav a i {
+    margin-right: 10px;
+    color: #ccc;
+}
+
+.sidebar .help-center {
+    margin-top: auto;
+    padding: 10px;
+    border-top: 1px solid #333;
+    text-align: center;
+    color: #ccc;
+}
+
+.sidebar .user-profile {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #333;
+}
+
+.sidebar .user-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #3498db;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+}
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 250px;
+        background-color: #252525;
+        height: 100vh;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: -250px; /* Initially hidden */
+        top: 0;
+        z-index: 1000;
+        transition: left 0.3s ease; /* Use 'left' instead of transform */
+    }
+
+    .sidebar nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar nav a {
+        padding: 10px;
+        text-align: left;
+        font-size: 16px;
+    }
+
+    .sidebar .show-sidebar {
+        left: 0;
+    }
+
+    .sidebar-toggle {
+        display: block;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        width: 100%;
+        text-align: center;
+    }
+
+    .content {
+        padding: 10px;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .menubutton {
+        display: block;
+        width: 50px;
+        cursor: pointer;
+    }
+
+    .close-sidebar {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        align-self: flex-end;
+    }
+}
+
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid #34495e;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #3498db;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.user-avatar i {
+    color: #fff;
+}
+
+.user-info span {
+    display: block;
+}
+
+.user-info small {
+    color: #ccc;
+}
+
+.edit-profile {
+    color: #3498db;
+    text-decoration: none;
+    margin-left: auto;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.create-event-btn {
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.notifications {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.notification {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.notification:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.notification p {
+    margin: 0;
+}
+
+.notification small {
+    color: #999;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #282c34; /* Dark background */
+    color: #fff; /* White text */
+}
+
+.notifications-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #3d424d; /* Darker container background */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.title p {
+    margin: 5px 0 0;
+    color: #ccc;
+}
+
+.actions button {
+    background-color: #528bff; /* Blue button */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex; /* Align icon and text */
+    align-items: center;
+}
+
+.actions button i {
+    margin-right: 5px;
+}
+
+.actions button.create-event {
+    background-color: #4CAF50; /* Green create event button */
+}
+
+.notifications-list {
+    background-color: #333740; /* Slightly lighter list background */
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #444; /* Darker border */
+}
+
+.notification:last-child {
+    border-bottom: none;
+}
+
+.notification .icon {
+    margin-right: 15px;
+    font-size: 1.2em;
+    color: #528bff; /* Blue icons */
+}
+
+.notification .content {
+    flex-grow: 1;
+}
+
+.notification p {
+    margin: 0;
+}
+
+.notification small {
+    color: #ccc;
+}
+
+.notification .status {
+    color: #4CAF50; /* Green checkmark */
+    font-size: 1.2em;
+}
+.sidebar {
+    width: 250px;
+    background-color: #252525; /* Darker sidebar */
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #3498db; /* Blue logo color */
+}
+
+.sidebar nav {
+    flex-grow: 1;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #e0e0e0;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav a:hover, .sidebar nav a.active {
+    background-color: #333; /* Slightly lighter hover/active */
+}
+
+.sidebar nav a i {
+    margin-right: 10px;
+    color: #ccc;
+}
+
+.sidebar .help-center {
+    margin-top: auto;
+    padding: 10px;
+    border-top: 1px solid #333;
+    text-align: center;
+    color: #ccc;
+}
+
+.sidebar .user-profile {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #333;
+}
+
+.sidebar .user-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #3498db;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+}

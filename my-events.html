@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Tix Dashboard</title>
+    <link rel="stylesheet" href="dash.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <a href="style.html" class="logo">EventTix</a>
+
+            <nav>
+                <a href="dash.html" class="active"><i class="fas fa-chart-line"></i> Dashboard Overview</a>
+                <a href="my-events.html"><i class="fas fa-calendar-alt"></i> My Events</a>
+                <a href="pay.html"><i class="fas fa-ticket-alt"></i> Tickets & Payments</a>
+                <a href="notif.html"><i class="fas fa-bell"></i> Notifications</a>
+                <a href="#"><i class="fas fa-users"></i> Community</a>
+                <a href="#"><i class="fas fa-envelope"></i> Messages</a>
+                <a href="sett.html"><i class="fas fa-cog"></i> Settings & Profile</a>
+            </nav>
+            <style>
+                .user-avatar {
+                  width: 40px; /* Adjust size as needed */
+                  height: 40px; /* Adjust size as needed */
+                  border-radius: 50%; /* Makes it circular */
+                  overflow: hidden; /* Clips content to the circle */
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background-color: #ccc; /* Placeholder background color */
+                  color: #fff; /* Placeholder text color */
+                  font-size: 16px; /* Adjust font size for initials */
+                }
+              
+                .user-avatar img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover; /* Ensures the image fills the circle without distortion */
+                }
+              
+                .help-center {
+                  /* Add your styling for the help center text */
+                }
+              
+                .user-profile {
+                  display: flex;
+                  align-items: center;
+                  /* Add other styling for the user profile container */
+                }
+              
+                .user-details {
+                  margin-left: 10px; /* Adjust spacing between avatar and details */
+                  /* Add other styling for user details */
+                }
+              
+                .user-name {
+                  /* Add styling for the user name */
+                }
+              
+                .user-status {
+                  font-size: 0.8em;
+                  color: #888;
+                  /* Add styling for the user status */
+                }
+              
+                .logout {
+                  margin-left: auto; /* Push logout to the right */
+                  /* Add styling for the logout button/text */
+                }
+              </style>
+              
+              <div class="help-center">Help Center</div>
+              <div class="user-profile">
+                <div class="user-avatar">
+                  <img src="images/man.avif" alt="User Avatar">
+                  </div>
+                <div class="user-details">
+                  <div class="user-name">John Doe</div>
+                  <div class="user-status">Premium Member</div>
+                </div>
+                <div class="logout">Logout</div>
+              </div>
+        </aside>
+        <main class="content">
+            <header class="main-header">
+                <h2>My Events</h2>
+            </header>
+
+
+
+
+
+            <section class="my-events">
+                <div class="my-events-header">
+                    <h3>My Events</h3>
+                    <button class="create-event">Create Events</button>
+                </div>
+                <div class="my-events-tabs">
+                    <button class="tab active">Upcoming</button>
+                    <button class="tab">Past</button>
+                    <button class="tab">Saved</button>
+                </div>
+                <div class="event-list">
+                    <div class="event-card">
+                        <img src="images/african.jpg" alt="African Startup Conference" class="event-image">
+                        <div class="event-details">
+                            <h4>African Startup Conference</h4>
+                            <p>December 5-7, 2024</p>
+                            <p>CIC Abdelatif Rahal, Algiers</p>
+                        </div>
+                        <button class="view-details">View Details</button>
+                    </div>
+                    <div class="event-card">
+                        <img src="images/algeria2.0.jpeg" alt="Algeria2.0" class="event-image">
+                        <div class="event-details">
+                            <h4>Algeria 2.0</h4>
+                            <p>November 19-23, 2024</p>
+                            <p>Cyberpark of Sidi Abdellah, Algiers</p>
+                        </div>
+                        <button class="view-details">View Details</button>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="upcoming-events">
+              <div class="my-events">
+                  <h3>Upcoming Events</h3>
+              </div>
+              <div class="my-events-tabs">
+                  <button class="tab active">Upcoming</button>
+                  <button class="tab">Past</button>
+                  <button class="tab">Saved</button>
+              </div>
+              <div class="event-list">
+                  <div class="event-card">
+                      <img src="images/african.jpg" alt="African Startup Conference" class="event-image">
+                      <div class="event-details">
+                          <h4>African Startup Conference</h4>
+                          <p>December 5-7, 2024</p>
+                          <p>CIC Abdelatif Rahal, Algiers</p>
+                      </div>
+                      <button class="view-details">View Details</button>
+                  </div>
+                  <div class="event-card">
+                      <img src="images/algeria2.0.jpeg" alt="Algeria2.0" class="event-image">
+                      <div class="event-details">
+                          <h4>Algeria 2.0</h4>
+                          <p>November 19-23, 2024</p>
+                          <p>Cyberpark of Sidi Abdellah, Algiers</p>
+                      </div>
+                      <button class="view-details">View Details</button>
+                  </div>
+              </div>
+          </section>
+
+
+
+
+
+   
+        </main>
+    </div>
+</body>
+</html>

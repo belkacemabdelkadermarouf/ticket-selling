@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Tickets</title>
+    <link rel="stylesheet" href="ticket.css">
+</head>
+<body>
+    <div class="ticket-window">
+        <div class="header">
+            <h2>Buy Tickets</h2>
+            <span class="close-button">&times;</span>
+        </div>
+        <p class="subheader">Select your ticket type for Cto Forum</p>
+
+        <div class="ticket-options">
+            <div class="ticket-card free selectable">
+                <h3>Visitor</h3>
+                <span class="price">Free Pack</span>
+                <ul>
+                    <li><span class="checkmark">&#10004;</span> Access to Exhibition</li>
+                    <li><span class="checkmark">&#10004;</span> Opening Ceremonies</li>
+                    <li><span class="checkmark">&#10004;</span> Access to panels & conferences</li>
+                </ul>
+            </div>
+
+            <div class="ticket-card premium selectable">
+                <h3>Premium Three days</h3>
+                <div class="price-container">
+                    <span class="price-dzd">500 DZD /</span>
+                    <span class="price-usd">2.99 USD</span>
+                </div>
+                <p class="availability">Limited availability</p>
+                <ul>
+                    <li><span class="checkmark">&#10004;</span> Access to Exhibition</li>
+                    <li><span class="checkmark">&#10004;</span> Opening Ceremonies</li>
+                    <li><span class="checkmark">&#10004;</span> Conference, Panels, Networking</li>
+                    <li><span class="checkmark">&#10004;</span> Access to Lunch</li>
+                </ul>
+            </div>
+
+            <div class="ticket-card exclusive selectable">
+                <h3>Exclusive Three days</h3>
+                <div class="price-container">
+                    <span class="price-dzd">1000 DZD /</span>
+                    <span class="price-usd">4.99 USD</span>
+                </div>
+                <p class="availability">Limited availability</p>
+                <ul>
+                    <li><span class="checkmark">&#10004;</span> Access to Exhibition</li>
+                    <li><span class="checkmark">&#10004;</span> Opening Ceremonies</li>
+                    <li><span class="checkmark">&#10004;</span> Conference, Panels, Networking</li>
+                    <li><span class="checkmark">&#10004;</span> Access to Lunch</li>
+                    <li><span class="checkmark">&#10004;</span> VIP area access</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="purchase-details">
+            <div class="quantity-selector">
+                <label for="quantity">Quantity</label>
+                <div class="quantity-controls">
+                    <button type="button" class="quantity-button minus">-</button>
+                    <input type="number" id="quantity" value="1" min="1">
+                    <button type="button" class="quantity-button plus">+</button>
+                </div>
+            </div>
+
+            <div class="email-input">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" value="bakacemarouf29@gmail.com" required>
+            </div>
+            <p class="email-note">Your tickets will be sent to this email.</p>
+
+            <div class="actions">
+                <div class="actions">
+                    <button type="button" class="cancel-button">Cancel</button>
+                    <a href="ticket2.html">
+                        <button type="button" class="payment-button">Continue to Payment</button>
+                    </a>
+                </div>    
+            </div>
+        </div>
+    </div>
+
+    <script src="ticket.java"></script>
+</body>
+</html>

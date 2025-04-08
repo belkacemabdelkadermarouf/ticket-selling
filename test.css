@@ -1,0 +1,128 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.header-actions button {
+    padding: 8px 12px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.header-actions .browse-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.header-actions .notification-btn {
+    background-color: transparent;
+    color: #333;
+}
+
+.welcome-message {
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+nav button {
+    padding: 8px 12px;
+    margin-right: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+
+nav button.active {
+    border-bottom-color: #007bff;
+}
+
+.event-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.event-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.event-image {
+    position: relative;
+}
+
+.event-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.event-status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.event-details {
+    padding: 15px;
+}
+
+.event-details h3 {
+    margin-top: 0;
+}
+
+.event-details p {
+    margin-bottom: 8px;
+}
+
+.view-details {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.save-event {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    float: right;
+    font-size: 24px;
+    color: #333;
+}

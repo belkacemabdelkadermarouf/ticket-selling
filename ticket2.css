@@ -1,0 +1,149 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    margin: 0;
+}
+
+.payment-window {
+    background-color: #1e2736;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 400px; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.payment-window .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.payment-window .header h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.payment-window .close-button {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.payment-window .close-button:hover {
+    color: #fff;
+}
+
+.payment-window .subheader {
+    color: #ccc;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.order-summary {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #2c3e50;
+    border-radius: 5px;
+}
+
+.order-summary h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.order-summary .summary-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    color: #ddd;
+    margin-bottom: 5px;
+}
+
+.order-summary .summary-item.total {
+    padding-top: 10px;
+    border-top: 1px solid #34495e;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    background-color: #2c3e50;
+    color: #fff;
+    border: 1px solid #34495e;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.payment-option:hover {
+    background-color: #34495e;
+    border-color: #4a698a;
+}
+
+.payment-option .icon {
+    font-size: 1.5em;
+    margin-right: 15px;
+}
+
+.payment-option .option-details span {
+    display: block;
+}
+
+.payment-option .option-details .sub-text {
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+.payment-window .actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.payment-window .actions button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.payment-window .actions .back-button {
+    background-color: #7f8c8d;
+    color: #fff;
+}
+
+.payment-window .actions .back-button:hover {
+    background-color: #95a5a6;
+}
+
+.payment-window .actions .confirm-button {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.payment-window .actions .confirm-button:hover {
+    background-color: #27ae60;
+}

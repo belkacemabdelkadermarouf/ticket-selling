@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Tix - Notifications</title>
+    <link rel="stylesheet" href="notif.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <a href="style.html" class="logo">EventTix</a>
+            <nav>
+                <a href="dash.html" class="active"><i class="fas fa-chart-line"></i> Dashboard Overview</a>
+                <a href="my-events.html"><i class="fas fa-calendar-alt"></i> My Events</a>
+                 <a href="pay.html"><i class="fas fa-ticket-alt"></i> Tickets & Payments</a>
+                <a href="#"><i class="fas fa-bell"></i> Notifications</a>
+                <a href="#"><i class="fas fa-users"></i> Community</a>
+                <a href="#"><i class="fas fa-envelope"></i> Messages</a>
+                <a href="sett.html"><i class="fas fa-cog"></i> Settings & Profile</a>
+            </nav>
+            <style>
+                .user-avatar {
+                  width: 40px; /* Adjust size as needed */
+                  height: 40px; /* Adjust size as needed */
+                  border-radius: 50%; /* Makes it circular */
+                  overflow: hidden; /* Clips content to the circle */
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background-color: #ccc; /* Placeholder background color */
+                  color: #fff; /* Placeholder text color */
+                  font-size: 16px; /* Adjust font size for initials */
+                }
+              
+                .user-avatar img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover; /* Ensures the image fills the circle without distortion */
+                }
+              
+                .help-center {
+                  /* Add your styling for the help center text */
+                }
+              
+                .user-profile {
+                  display: flex;
+                  align-items: center;
+                  /* Add other styling for the user profile container */
+                }
+              
+                .user-details {
+                  margin-left: 10px; /* Adjust spacing between avatar and details */
+                  /* Add other styling for user details */
+                }
+              
+                .user-name {
+                  /* Add styling for the user name */
+                }
+              
+                .user-status {
+                  font-size: 0.8em;
+                  color: #888;
+                  /* Add styling for the user status */
+                }
+              
+                .logout {
+                  margin-left: auto; /* Push logout to the right */
+                  /* Add styling for the logout button/text */
+                }
+              </style>
+              
+              <div class="help-center">Help Center</div>
+              <div class="user-profile">
+                <div class="user-avatar">
+                  <img src="images/man.avif" alt="User Avatar">
+                  </div>
+                <div class="user-details">
+                  <div class="user-name">John Doe</div>
+                  <div class="user-status">Premium Member</div>
+                </div>
+                <div class="logout">Logout</div>
+              </div>
+        </aside>
+        <main class="content">
+            <div class="notifications-container">
+                <div class="header">
+                    <div class="title">
+                        <h1>Notifications</h1>
+                        <p>Welcome back, John Doe</p>
+                    </div>
+                    <div class="actions">
+                        <button class="create-event"><i class="far fa-calendar-plus"></i></button>
+                        <button class="browse-events">Browse Events</button>
+                    </div>
+                </div>
+                <div class="notifications-list">
+                    <div class="notification">
+                        <div class="icon"><i class="fas fa-bell"></i></div>
+                        <div class="content">
+                            <p>The venue for Algeria 2.0 has been updated. Check event details for more information.</p>
+                            <small>2 hours ago</small>
+                        </div>
+                        <div class="status"><i class="fas fa-check"></i></div>
+                    </div>
+                    <div class="notification">
+                        <div class="icon"><i class="fas fa-heart"></i></div>
+                        <div class="content">
+                            <p>New entrepreneurship event: "Startup Grind Algeria" matches your interests!</p>
+                            <small>1 day ago</small>
+                        </div>
+                        <div class="status"><i class="fas fa-check"></i></div>
+                    </div>
+                    <div class="notification">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <div class="content">
+                            <p>You have a new message from the organizer of African Startup Conference.</p>
+                            <small>3 days ago</small>
+                        </div>
+                        <div class="status"><i class="fas fa-check"></i></div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventTix</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    
+</head>
+
+<body>
+
+    
+    <header>
+        <nav class="nav-links">
+            <div class="logo">
+                <h1 class="event-tix">EventTix</h1>          
+            </div>
+
+        </div>
+        <div class="search-container">
+            <div class="search-icon" onclick="toggleSearchBar()">
+                🔍
+            </div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search events..." onkeyup="searchEvents()">
+                <div class="search-results" id="searchResults"></div>
+            </div>
+        </div>
+
+                <head>
+                    <style>
+                    .events-dropdown {
+                      display: none; 
+                      position: absolute;
+                      background-color: #4CAF50;
+                      min-width: 160px;
+                      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                      z-index: 1;
+                    }
+                    
+                
+                    
+                    </style>
+                    </head>
+                    <body>
+                    <div class="events-link">
+                      <a href="event.html" onclick="toggleEventsDropdown(event)">Events</a>
+                      <div class="events-dropdown" id="eventsDropdown">
+                        <a href="#">Concerts</a>
+                        <a href="#">Sports</a>
+                        <a href="#">Theater</a>
+                        <a href="event.html">Conferences</a>
+                      </div>
+ 
+                      <head>
+                      <style>
+                      .button-like {
+                        padding: 10px 20px;
+                        background-color: #4CAF50;
+                        color: rgb(0, 0, 0);
+                        text-decoration: none;
+                        border: none;
+                        border-radius: 5px;
+                        font-size: 16px;
+                        cursor: pointer;
+                        transition: background-color 0.3s ease;
+                      }
+                      
+                      .button-like:hover {
+                        background-color: #3e8e41;
+                      }
+                      </style>
+                      </head>
+                      <body>
+                      
+                      <a href="style.html" class="button-like">Home</a>
+                      <a href="#" class="button-like">About</a>
+                      <a href="#" class="button-like">Contact</a>
+
+                      
+                      </body>
+                      </html>                    </div>
+                    
+                    <script>
+                    function toggleEventsDropdown(event) {
+                      event.preventDefault();
+                    
+                      var dropdown = document.getElementById("eventsDropdown");
+                      if (dropdown.style.display === "none" || dropdown.style.display === "") {
+                        dropdown.style.display = "block";
+                      } else {
+                        dropdown.style.display = "none";
+                      }
+                    }
+                    
+                    window.onclick = function(event) {
+                      if (!event.target.matches('.events-link a')) {
+                        var dropdowns = document.getElementsByClassName("events-dropdown");
+                        for (var i = 0; i < dropdowns.length; i++) {
+                          var openDropdown = dropdowns[i];
+                          if (openDropdown.style.display === "block") {
+                            openDropdown.style.display = "none";
+                          }
+                        }
+                      }
+                    }
+                    </script>
+                    
+                    </body>
+
+                    
+            <div class="auth-buttons">
+                <button class="signin"><a href="auth.html">Log In</a></button>
+                <button class="signup"><a href="auth.html">Sign Up</a></button>
+            </div>
+        </nav>
+    </header>
+
+
+ 
+<section class="hero">
+    <div class="hero-content">
+        <h1>Get Tickets to Amazing <br>Events</h1> 
+        <p>Discover and book tickets to the most exciting concerts, sports, arts,<br> and entertainment events near you.</p>
+        <div class="hero-buttons">
+            <div class="button-container">
+                <button class="button button-dark" onclick="exploreEvents()">Explore Events <img src="images/arrow.png" alt="Arrow" width="15"></button>
+                <button class="button button-light" onclick="viewCalendar()">View Calendar</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.hero {
+    background-image: url('images/hero\ picture.png'); 
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    text-align: left;
+    padding: 100px 20px; 
+    position: relative; 
+    min-height: 400px;
+    display: flex;
+    align-items: center; 
+    z-index: 1
+    display:flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 800px;
+    margin: 0;
+    padding-top: 20px;
+    padding-left: 20px;
+    text-align: left; 
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: left;
+}
+
+.button {
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-dark {
+    background-color: #282828; 
+    color: white;
+}
+
+.button-light {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    border: 1px solid #ccc;
+}
+
+.button-dark:hover {
+    background-color: #444;
+}
+
+.button-light:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.button img {
+    margin-left: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .button-container {
+        justify-content: center; 
+    }
+
+    .button {
+        width: 100%; 
+        margin: 10px 0; 
+    }
+}
+</style>
+
+<script>
+function exploreEvents() {
+    window.location.href = 'event.html';
+}
+
+function viewCalendar() {
+    alert("View Calendar button clicked!");
+}
+</script>
+    <section class="featured-event">
+        <body>
+            <section class="featured-event">
+                <h2>Featured Event</h2>
+                <p>Don't miss our highlighted event of the month with exclusive offers.</p>
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="images/cto.png" alt="cto forum 2025"> 
+                    </div>
+                    <div class="event-details">
+                        <span class="featured-tag">FEATURED</span>
+                        <span class="limited-tickets">Limited Tickets</span>
+                        <h3>CTO Forum Algeria 2025</h3>
+                        <p>Experience the most anticipated tech forum of the year with leading CTOs, groundbreaking innovations, and unparalleled networking opportunities                            .</p>
+                        <div class="event-info">
+                            <p><img src="calendar-icon.png" alt="Date"> 17 - 19 april 2025</p>
+                            <p><img src="location-icon.png" alt="Location"> Moufdi Zakaria Palace of Culture</p>
+                            <p><img src="ticket-icon.png" alt="Price"> From $3</p>
+                        </div>
+                        <div class="event-actions">
+                            <a href="subscription.html" class="get-tickets">Get Tickets Now</a>
+                            <a href="#" class="learn-more">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </body>
+    </section>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Plans</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .subtitle {
+            color: #777;
+            margin-bottom: 20px;
+        }
+        .plans {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .plan {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+        .plan.popular {
+            border: 2px solid #000;
+            position: relative;
+        }
+        .plan.popular::before {
+            content: "Popular";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: black;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+        .plan h3 {
+            margin: 0;
+            color: #333;
+        }
+        .price {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .features {
+            list-style: none;
+            padding: 0;
+        }
+        .features li {
+            margin: 5px 0;
+        }
+        .btn {
+            background: black;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Cities</title>
+    <style>
+
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .city-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .city-card {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .city-card:hover {
+            transform: scale(1.05);
+        }
+
+        .city-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .city-image-container {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .city-image {
+            display: block;
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            aspect-ratio: 1 / 1; /* Ensure images are square for a consistent look */
+            object-fit: cover;
+        }
+
+        .city-name {
+            padding: 10px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            font-weight: bold;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Popular Cities on EventTix</h2>
+        <div class="city-grid">
+            <div class="city-card">
+                <a href="#" class="city-link" onclick="showCity('Algiers')">
+                    <div class="city-image-container">
+                        <img src="images/alger.webp" alt="Algiers" class="city-image">
+                    </div>
+                    <div class="city-name">Algiers</div>
+                </a>
+            </div>
+            <div class="city-card">
+                <a href="#" class="city-link" onclick="showCity('Oran')">
+                    <div class="city-image-container">
+                        <img src="images/oran.jpg_large" alt="Oran" class="city-image">
+                    </div>
+                    <div class="city-name">Oran</div>
+                </a>
+            </div>
+            <div class="city-card">
+                <a href="#" class="city-link" onclick="showCity('Annaba')">
+                    <div class="city-image-container">
+                        <img src="images/annaba.jpg" alt="annaba" class="city-image">
+                    </div>
+                    <div class="city-name">Annaba</div>
+                </a>
+            </div>
+            <div class="city-card">
+                <a href="#" class="city-link" onclick="showCity('Constantine')">
+                    <div class="city-image-container">
+                        <img src="images/Ouargla.jpg" alt="Constantine" class="city-image">
+                    </div>
+                    <div class="city-name">Ouargla</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showCity(cityName) {
+            alert(`You clicked on ${cityName}! (Functionality can be added here)`);
+            // In a real application, you might navigate to a page for this city
+            // window.location.href = `/cities/${cityName.toLowerCase()}`;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<body>
+    <div class="container">
+        <h1 class="title">Subscription Plans</h1>
+        <p class="subtitle">Get unlimited access to events with our subscription plans</p>
+        <div class="plans">
+            <div class="plan">
+                <h3>Basic</h3>
+                <p class="price">500 DA</p>
+                <ul class="features">
+                    <li>Access to one event</li>
+                    <li>Standard seating</li>
+                    <li>Basic access</li>
+                </ul>
+                <a href="subscription.html" class="btn">Get Started</a>
+            </div>
+            <div class="plan popular">
+                <h3>Premium</h3>
+                <p class="price">2500 DA</p>
+                <ul class="features">
+                    <li>Multiple event access</li>
+                    <li>Priority seating</li>
+                    <li>Meet & greet access</li>
+                    <li>Exclusive gifts</li>
+                </ul>
+                <a href="subscription.html" class="btn">Get Started</a>
+            </div>
+            <div class="plan">
+                <h3>Ultimate</h3>
+                <p class="price">4000 DA</p>
+                <ul class="features">
+                    <li>Unlimited event access</li>
+                    <li>VIP seating guaranteed</li>
+                    <li>Backstage passes</li>
+                    <li>Dedicated concierge</li>
+                </ul>
+                <a href="subscription.html" class="btn">Get Started</a>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="why-choose">
+        <h2>Why Choose EventTix</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <img src="images/Screenshot 2025-03-08 173534.png" alt="">
+                <h3>Secure Transactions</h3>
+                <p>All purchases are protected with appropriate security and fraud prevention.</p>
+            </div>
+            <div class="benefit-card">
+                <img src="images/Screenshot 2025-03-08 173202.png" alt="">
+                <h3>Verified Events</h3>
+                <p>Every event is carefully verified to ensure authenticity and quality.</p>
+            </div>
+            <div class="benefit-card">
+                <img src="images/Screenshot 2025-03-08 173543.png" alt="">
+                <h3>Easy Planning</h3>
+                <p>Manage all your event tickets in one place with reminders and updates.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="why-choose">
+        <h2>Why  Built  EventTix</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <p class="text"> As event organizers ourselves, we faced challenges with slow platforms, expensive ticketing services, and complicated event management tools <div>
+                    <p class="text">That's why we created Eventix — a smart, clean platform designed for all event organizers, from small gatherings to large-scale events.</p></div></p>
+             </div>
+ 
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>EventTix</h3>
+            <p>Your one-stop destination for all event tickets. Discover, book, and enjoy with ease.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#">Concerts</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Theater</a></li>
+                <li><a href="#">Conferences</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Subscribe</h3>
+            <p>Get updates on new events and exclusive offers.</p>
+            <form class="subscribe-form">
+                <input type="email" placeholder="Your email" required>
+                <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 EventTix. All rights reserved.</p>
+        <nav>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Help Center</a>
+        </nav>
+    </div>
+</footer>
+    <script src="style.java"></script> -->
+</body>
+</html>

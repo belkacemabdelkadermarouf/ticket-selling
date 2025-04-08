@@ -1,0 +1,239 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.ticket-window {
+    background-color: #1e2736;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 400px; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.close-button {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.close-button:hover {
+    color: #fff;
+}
+
+.subheader {
+    color: #ccc;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.ticket-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.ticket-card {
+    background-color: #2c3e50;
+    border-radius: 5px;
+    padding: 15px;
+    border: 1px solid #34495e;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out; 
+}
+
+.ticket-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.ticket-card h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.ticket-card .price {
+    font-size: 1em;
+    color: #2ecc71;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.ticket-card .price-container {
+    margin-bottom: 8px;
+}
+
+.ticket-card .price-dzd {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.ticket-card .price-usd {
+    font-size: 0.9em;
+    color: #ddd;
+}
+
+.ticket-card .availability {
+    color: #e67e22;
+    font-size: 0.8em;
+    margin-bottom: 8px;
+}
+
+.ticket-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ticket-card li {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    color: #ddd;
+}
+
+.ticket-card li .checkmark {
+    color: #2ecc71;
+    margin-right: 5px;
+}
+
+.purchase-details {
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.quantity-selector label {
+    margin-right: 10px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-button {
+    background-color: #34495e;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 3px;
+}
+
+.quantity-button:hover {
+    background-color: #4a698a;
+}
+
+.quantity-controls input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #34495e;
+    border-radius: 3px;
+    background-color: #2c3e50;
+    color: #fff;
+    font-size: 0.9em;
+    -moz-appearance: textfield; 
+}
+
+.quantity-controls input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.email-input {
+    margin-bottom: 15px;
+}
+
+.email-input label {
+    display: block;
+    font-size: 0.9em;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.email-input input[type="email"] {
+    width: calc(100% - 12px);
+    padding: 8px;
+    border: 1px solid #34495e;
+    border-radius: 3px;
+    background-color: #2c3e50;
+    color: #fff;
+    font-size: 0.9em;
+    box-sizing: border-box;
+}
+
+.email-input .required {
+    color: #e74c3c;
+}
+
+.email-note {
+    color: #aaa;
+    font-size: 0.8em;
+    margin-bottom: 15px;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.actions button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.actions .cancel-button {
+    background-color: #7f8c8d;
+    color: #fff;
+}
+
+.actions .cancel-button:hover {
+    background-color: #95a5a6;
+}
+
+.actions .payment-button {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.actions .payment-button:hover {
+    background-color: #27ae60;
+}
+
+.ticket-card.selected {
+    border: 2px solid #2ecc71;
+    box-shadow: 0 4px 12px rgba(46, 204, 113, 0.5);
+}
